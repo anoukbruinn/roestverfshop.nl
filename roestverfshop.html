@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roestverfshop.nl</title>
+    <link rel="STYLESHEET" href="style.css" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#804224",
+              secondary: "#2E2E2D",
+              light: "#EEEEEE",
+              dark: "#739321",
+            },
+            fontFamily: {
+              helvetica: ["helvetica"],
+              ubuntu: ["ubuntu"],
+            },
+            spacing: {},
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="flex justify-between bg-white-500">
+        <img class="pl-193 ml-48" src="assets/Group 30.svg" />
+        <nav>
+          <a class="text-secondary" href="/"> Home</a>
+          <a class="text-secondary" href="/"> Shop</a>
+          <a href="/"> Over ons</a>
+          <a href="/"> Hoe werkt het?</a>
+          <a href="/"> Contact</a>
+        </nav>
+        <div class="flex justify between bg-light">
+          <input class="bg-light" type="text" placeholder="Zoek producten" />
+          <img src="assets/Group 43.svg" />
+        </div>
+
+        <img class="bg-primary rounded-full m-49" src="assets/Path 31.svg" />
+      </div>
+    </header>
+
+    <main>
+      <section class="bg-[url('assets/roest-header-image.jpg')] padding">
+        <div class="">
+          <h1 class="text-5xl text-light font-['helvetica']">
+            Roestverf in verschillende kleuren
+          </h1>
+          <p class="text-light my-6">
+            Ben je op zoek naar een originele afwerking voor wanden en muren? De
+            hoogwaardige metaalverven van Roestverfshop geven een natuurlijk,
+            industrieel en roestachtig effect aan je ruimte. De verf bevat fijne
+            metaaldeeltjes en is verkrijgbaar in verschillende uitvoeringen.
+            Laat je verrassen!
+          </p>
+
+          <button
+            class="text-light rounded-[12px] border-color: rgb(255 255 255)"
+          >
+            Bekijk ons assortiment ->
+          </button>
+        </div>
+        <div class="flex justify-between bg-secondary">
+          <div class="flex">
+            <img src="/assets/check (1).svg" />
+            <p class="text-ubuntu text-light">Veilig betalen via iDeal</p>
+          </div>
+          <div class="flex">
+            <img src="/assets/check (1).svg" />
+            <p class="text-ubuntu text-light">
+              Exclusieve shop voor bijzondere verftinten & roestverf
+            </p>
+          </div>
+          <div class="flex">
+            <img src="/assets/check (1).svg" />
+            <p class="text-ubuntu text-light">Gratis verzending v.a. €50,-</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="my-4">
+        <h1 class="text-helvetica text-5xl">Onze basiskleuren</h1>
+      </div>
+
+      <section class="flex justify-between p-3.5 ml-48 mr-48 padding box">
+        <div class="bg-primary w-96">
+          <h2 class="text-2xl text-bold text-light">
+            Een natuurlijk roest effect op muren en meubels
+          </h2>
+          <p class="text-center text-light">
+            Onze verf is gemaakt op waterbasis en bevat fijne metaaldeeltjes.
+          </p>
+          <p class="text-center text-light">
+            Verkrijgbaar in de kleuren brons, ijzer, koper en messing, met een
+            natuurlijk effect of een oxidatie effect.
+          </p>
+        </div>
+        <div class="bg-light w-60 h-97">
+          <img class="bg" src="/assets/Ijzerverf.png" />
+          <p>IJZERVERF (FIJN/GROF)</p>
+          <p class="text-ubuntu font-bold">Vanaf €79,95</p>
+          <div class="w-8 bg-dark rounded-full h-8">
+            <img class="" src="/assets/paint-brush.png " />
+          </div>
+          <p class="text-ubuntu font-light text-sm">
+            Bekijk kleurmogelijkheden
+          </p>
+        </div>
+
+        <div class="bg-light w-60 h-97">
+          <img class="bg" src="/assets/koperverf.png" />
+          <p>KOPERVERF (FIJN/GROF)</p>
+          <p class="text-ubuntu font-bold">Vanaf €79,95</p>
+          <div class="w-8 bg-dark rounded-full h-8">
+            <img class="" src="/assets/paint-brush.png " />
+          </div>
+          <p class="text-ubuntu font-light text-sm">
+            Bekijk kleurmogelijkheden
+          </p>
+        </div>
+
+        <div class="bg-light w-60 h-97">
+          <img class="bg" src="/assets/messingverf.png" />
+          <p>MESSINGVERF (FIJN/GROF)</p>
+          <p class="text-ubuntu font-bold">Vanaf €79,95</p>
+          <div class="w-8 bg-dark rounded-full h-8">
+            <img class="" src="/assets/paint-brush.png " />
+          </div>
+          <p class="text-ubuntu font-light text-sm">
+            Bekijk kleurmogelijkheden
+          </p>
+        </div>
+
+        <div class="bg-light w-60 h-97">
+          <img class="bg" src="/assets/bronsverf.png" />
+          <p>BRONSVERF (FIJN/GROF)</p>
+          <p class="text-ubuntu font-bold">Vanaf €79,95</p>
+          <div class="flex justify-between">
+            <img
+              class="w-8 bg-dark rounded-full h-8"
+              src="/assets/paint-brush.png "
+            />
+
+            <p class="text-ubuntu font-light text-sm">
+              Bekijk kleurmogelijkheden
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <button class="bg-dark mr-48">Bekijk compleet assortiment -></button>
+
+      <section class="ml-48 mr-48 my-6">
+        <div>
+          <h1 class="text-3xl">Kies je variant</h1>
+          <p>
+            Met onze basiskleuren brons, ijzer, koper en messing kan je in
+            combinatie met onze sealers en oxidatiemiddelen 10 verschillende
+            kleurvarianten maken. Hier zie je welke kleurvarianten er zijn en
+            met welke producten je die kan maken.
+          </p>
+        </div>
+        <div><img class="" src="/assets/koperverf-oxidatie-presealer.png"</div>
+        <div>
+          <p class="">Product:</p>
+          <p class="">Koperverf met oxidatie effect en presealer</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

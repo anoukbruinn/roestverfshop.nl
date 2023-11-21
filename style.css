@@ -1,0 +1,23 @@
+/* FONT */
+
+h1 {
+  font-family: helvetica;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+h2 {
+  font-family: ubuntu;
+  font-size: 27px;
+  font-weight: thin;
+}
+
+p {
+  font-family: ubuntu;
+  font-size: 17px;
+  font-weight: light;
+}
+
+a {
+  font-family: ubuntu;
+}
