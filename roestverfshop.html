@@ -18,10 +18,12 @@
               dark: "#739321",
             },
             fontFamily: {
-              helvetica: ["helvetica"],
+              helvetica: ["Helvetica Neue"],
               ubuntu: ["ubuntu"],
             },
-            spacing: {},
+            width: {
+              852: "53.25rem",
+            },
           },
         },
       };
@@ -30,30 +32,39 @@
   <body>
     <header>
       <div class="flex justify-between bg-white-500">
-        <img class="pl-193 ml-48" src="assets/Group 30.svg" />
-        <nav>
-          <a class="text-secondary" href="/"> Home</a>
-          <a class="text-secondary" href="/"> Shop</a>
-          <a href="/"> Over ons</a>
-          <a href="/"> Hoe werkt het?</a>
-          <a href="/"> Contact</a>
+        <img class="pl-193 ml-48 mt-8 mb-8" src="assets/Group 30.svg" />
+        <nav class="mt-8">
+          <a class="text-ubuntu font-bold" href="/"> Home</a>
+          <a class="text-ubuntu font-bold ml-7" href="/"> Shop</a>
+          <a class="font-bold text-ubuntu ml-7" href="/"> Over ons</a>
+          <a class="font-bold text-ubuntu ml-7" href="/"> Hoe werkt het?</a>
+          <a class="font-bold text-ubuntu ml-7" href="/"> Contact</a>
         </nav>
-        <div class="flex justify between bg-light">
+        <div class="flex justify between bg-light mt-8 mb-8">
           <input class="bg-light" type="text" placeholder="Zoek producten" />
           <img src="assets/Group 43.svg" />
         </div>
 
-        <img class="bg-primary rounded-full m-49" src="assets/Path 31.svg" />
+        <img
+          class="bg-primary rounded-full m-49 mt-8 mb-8 mr-48"
+          src="assets/Path 31.svg"
+        />
       </div>
     </header>
 
     <main>
-      <section class="bg-[url('assets/roest-header-image.jpg')] padding">
+      <section
+        class="bg-[url('assets/roest-header-image.jpg')] bg-no-repeat padding"
+      >
         <div class="">
-          <h1 class="text-5xl text-light font-['helvetica']">
+          <h1
+            class="text-5xl text-light text-helvetica ml-48 pt-20 font-black italic"
+          >
             Roestverf in verschillende kleuren
           </h1>
-          <p class="text-light my-6">
+          <p
+            class="text-light font-light my-6 pb-31 ml-48 w-[53.25rem] text-sm"
+          >
             Ben je op zoek naar een originele afwerking voor wanden en muren? De
             hoogwaardige metaalverven van Roestverfshop geven een natuurlijk,
             industrieel en roestachtig effect aan je ruimte. De verf bevat fijne
@@ -61,9 +72,7 @@
             Laat je verrassen!
           </p>
 
-          <button
-            class="text-light rounded-[12px] border-color: rgb(255 255 255)"
-          >
+          <button class="text-light rounded-[12px] border-white pb-60 ml-48">
             Bekijk ons assortiment ->
           </button>
         </div>
@@ -86,12 +95,16 @@
       </section>
 
       <div class="my-4">
-        <h1 class="text-helvetica text-5xl">Onze basiskleuren</h1>
+        <h1 class="text-helvetica text-5xl justify-center">
+          Onze basiskleuren
+        </h1>
       </div>
 
-      <section class="flex justify-between p-3.5 ml-48 mr-48 padding box">
-        <div class="bg-primary w-96">
-          <h2 class="text-2xl text-bold text-light">
+      <section class="flex justify-between p-3.5 ml-48 mr-48 space-x-3.5">
+        <div class="bg-primary w-96 p-3">
+          <h2
+            class="text-2xl text-light italic normal font-bold text-center normal"
+          >
             Een natuurlijk roest effect op muren en meubels
           </h2>
           <p class="text-center text-light">
@@ -157,9 +170,9 @@
 
       <button class="bg-dark mr-48">Bekijk compleet assortiment -></button>
 
-      <section class="ml-48 mr-48 my-6">
-        <div class="">
-          <div>
+      <section class="ml-48 mr-48 my-6 bg-[url('assets/kiesjevariant-bg.png')]">
+        <div class="flex justify-between">
+          <div class="w-60">
             <h1 class="text-3xl">Kies je variant</h1>
             <p>
               Met onze basiskleuren brons, ijzer, koper en messing kan je in
