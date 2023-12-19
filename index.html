@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Roestverfshop.nl</title>
     <link rel="STYLESHEET" href="style.css" type="text/css" />
+    	<!-- Link Swiper's CSS -->
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -158,9 +160,14 @@
 
       <div class="my-4 flex justify-center">
         <h1
-          class="text-5xl justify-center text-helvetica italic font-black mt-[3.75rem]"
+          class="text-5xl justify-center text-helvetica italic font-black mt-[3.75rem] text-primary"
         >
-          Onze basiskleuren
+          Onze
+        </h1>
+        <h1
+          class="text-5xl justify-center text-helvetica italic font-black mt-[3.75rem] ml-3"
+        >
+          basiskleuren
         </h1>
       </div>
 
@@ -183,6 +190,8 @@
         </div>
 
         <!-- ----verf---- -->
+
+        <!-- IJZERVERF -->
 
         <div class="bg-light w-[15.188rem] h-97">
           <img
@@ -208,6 +217,7 @@
           </div>
         </div>
 
+        <!-- KOPERVERF -->
         <div class="bg-light w-[15.188rem] h-97 place-content-center">
           <img
             class="mx-[41px] mt-[22px] mb-[13px]"
@@ -231,7 +241,7 @@
             </p>
           </div>
         </div>
-
+        <!-- MESSINGVERF -->
         <div class="bg-light w-[15.188rem] h-97">
           <img
             class="mx-[44px] mt-[39px] mb-[30px]"
@@ -258,6 +268,7 @@
           </div>
         </div>
 
+        <!-- BRONSVERF -->
         <div class="bg-light w-[15.188rem] h-97">
           <img
             class="mx-[44px] mt-[39px] mb-[27px]"
@@ -393,18 +404,42 @@
         </h1>
       </div>
 
+      <!-- VERFROLLER       -->
+
       <section class="flex justify-normal justify-center">
-        <div class="bg-light w-[31.313rem] h-[27.813rem]">
+        <div class="bg-light w-[31.313rem] h-[27.813rem] relative">
           <img class=" " src="assets/rollers.png" />
-          <p class="text-ubuntu ml-[15px]">VERFROLLER</p>
+          <div class="absolute bottom-12 absolute">
+            <p class="text-ubuntu ml-[15px] text">VERFROLLER</p>
+            <p class="text-dark font-bold text-ubuntu ml-[15px]">€6,35</p>
+          </div>
+          <div class="border-t-2 border-white mb-8 absolute left- bottom-1">
+            <button
+              class="absolute flex justify-center items-center bg-dark w-[258px] h-[34px] border-solid rounded-full text-white text-ubuntu text-sm"
+            >
+              In winkelwagentje
+            </button>
+            <img
+              class="absolute bottom-4 left-[314.03px] w-[20.51px] h-[16.12px]"
+              src="assets/Path 31.svg"
+            />
+          </div>
         </div>
+
+        <!--  SPATEL -->
 
         <div class="bg-light w-[31.313rem] h-[27.813rem] mx-[15px]">
-          <img class=" " src="assets/spatel.png" />
+          <img class="mt-[60px] ml-[66px]" src="assets/spatel.png" />
+          
         </div>
 
+        <!-- TROFFEL -->
+
         <div class="bg-light w-[31.313rem] h-[27.813rem]">
-          <img class=" " src="assets/rubberen-troffel.png" />
+          <img class="ml-[50px]" src="assets/rubberen-troffel.png" />
+        </div>
+     
+          
         </div>
       </section>
 
@@ -441,7 +476,7 @@
         </div>
       </section>
 
-      <!-- ----------------- FOOTER ------------------- -->
+      <!-- ------------------------------------------------- FOOTER ------------------------------------------------------- -->
 
       <footer>
         <!-- ------------instagram----------- -->
@@ -518,6 +553,72 @@
           </div>
         </section>
       </footer>
+
+
+<!-- swiper oefenen -->
+
+      <section>
+
+        <!-- galery top -->
+<div class=""> 
+
+          <!-- wrapper -->
+  <div class="">
+
+    <div class=""> <img src=""> </div>
+    <div class=""> <img src=""> </div>
+    <div class=""> <img src=""> </div>
+    <div class=""> <img src=""> </div>
+    <div class=""> <img src=""> </div>
+    <div class=""> <img src=""> </div>
+    <div class=""> <img src=""> </div>
+    <div class=""> <img src=""> </div>
+    <div class=""> <img src=""> </div>
+    <div class=""> <img src=""> </div>
+  </div>
+
+</div>
+
+      <!-- gallery bottom -->
+<div class="">
+        <!-- wrapper -->
+  
+      <div class="">
+
+
+    <div class=""> <img src=""> </div>
+    <div class=""> <img src=""> </div>
+    <div class=""> <img src=""> </div>
+    <div class=""> <img src=""> </div>
+    <div class=""> <img src=""> </div>
+    <div class=""> <img src=""> </div>
+    <div class=""> <img src=""> </div>
+    <div class=""> <img src=""> </div>
+    <div class=""> <img src=""> </div>
+    <div class=""> <img src=""> </div>
+  </div>
+</div>
+      </section>
     </main>
   </body>
 </html>
+
+<script>
+  var galleryThumbs = new Swiper('.gallery-thumbs', {
+    spaceBetween: 10,
+    slidesPerView: 10,
+    freeMode: true,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+  });
+  var galleryTop = new Swiper('.gallery-top', {
+    spaceBetween: 10,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    thumbs: {
+      swiper: galleryThumbs
+    }
+  });
+</script>
