@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roestverfshop.nl</title>
+    <link rel="STYLESHEET" href="style.css" type="text/css" />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#804224",
+              secondary: "#2E2E2D",
+              light: "#EEEEEE",
+              dark: "#739321",
+            },
+            fontFamily: {
+              helvetica: ["Helvetica Neue"],
+              ubuntu: ["ubuntu"],
+            },
+            width: {},
+
+            spacing: {},
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <div class="flex justify-between bg-white-500">
+        <img
+          class="pl-193 ml-48 mt-[2.125rem] mb-[2.125rem] h-[24px]"
+          src="assets/Group 30.svg"
+        />
+        <nav class="mt-8 h-[24px] mt-[2.125rem] mb-[2.125rem]">
+          <a class="text-ubuntu font-bold" href="/"> Home</a>
+          <a class="text-ubuntu font-bold ml-7" href="/"> Shop</a>
+          <a class="font-bold text-ubuntu ml-7" href="/"> Over ons</a>
+          <a class="font-bold text-ubuntu ml-7" href="/"> Hoe werkt het?</a>
+          <a class="font-bold text-ubuntu ml-7" href="/"> Contact</a>
+        </nav>
+        <!-- ------------search-input--------------- -->
+
+        <div
+          class="flex justify between bg-light my-[22px] w-29.813 rounded-[50px] overflow-hidden h-[50px] w-[29.813rem]"
+        >
+          <input
+            class="bg-light h-[50px] ml-[26px]"
+            type="text"
+            placeholder="Zoek producten"
+          />
+
+          <img
+            class="w-[21px] h-[21px] mt-[15px] ml-[230px]"
+            src="assets/Group 43.svg"
+          />
+        </div>
+
+        <div
+          class="w-[50px] h-[50px] rounded rounded-full bg-primary m-49 mt-8 mb-8 mr-48"
+        >
+          <p
+            class="bg-dark font-bold text-light text-ubuntu rounded-full w-[16px] h-[16px] border-white"
+          >
+            3
+          </p>
+          <img
+            class="flex justify-center items-center my-[2px] mx-[10px]"
+            src="assets/Path 31.svg"
+          />
+        </div>
+      </div>
+    </header>
+    <section
+      class="bg-[url('assets/background-shop.png')] bg-no-repeat padding h-[265px]"
+    >
+      <div class="ml-[193px]">
+        <h1 class="text-helvetica text-light text-5xl pt-[69px]">Shop</h1>
+        <p class="text-light text-ubuntu w-[1017px] top-[21px] pt-[21px]">
+          Korte SEO tekst over de producten in de roestverfshop. Lorem ipsum
+          dolor sit amet, consectetur adipiscing elit. Proin scelerisque
+          pellentesque orci id interdum. Proin vel erat id nisi dictum tincidunt
+          auctor sed arcu. Vivamus commodo, dui ac posuere pharetra, nisi felis
+          eleifend libero.
+        </p>
+      </div>
+    </section>
+
+    <section class="pt-[60px]">
+      <div class="">
+
+        <p class="">Categorieën</p>
+
+        <!--------------------- CATEGORIEËN --------------------->
+        <fieldset class="">
+          <div class="">
+            <!-- IJZERVERF (FIJN)  -->
+            <input
+              class=""
+              type="checkbox"
+              id="ijzerverf(fijn)"
+              name="ijzerverf(fijn)"
+              value="ijzerverf(fijn)"
+            />
+            <label class="" for="ijzerverf(fijn)"> IJzerverf (fijn) </label>
+          </div>
+
+          <div class="">
+            <!-- IJZERVERF (GROF) -->
+            <input
+              class=""
+              type="checkbox"
+              id="ijzerverf(grof)"
+              name="ijzerverf(grof)"
+              value="ijzerverf(grof)"
+            />
+            <label class="" for="ijzerverf(grof)"> IJzerverf (grof) </label>
+          </div>
+          <div class="">
+            <!-- KOPERVERF -->
+            <input
+              class=""
+              type="checkbox"
+              id="koperverf"
+              name="koperverf"
+              value="koperverf"
+            />
+            <label class="" for="koperverf"> Koperverf </label>
+          </div>
+
+          <div class="">
+            <!-- BRONSVERF -->
+            <input
+              class=""
+              type="checkbox"
+              id="bronsverf"
+              name="bronsverf"
+              value="bronsverf"
+            />
+            <label class="" for="bronsverf"> Bronsverf </label>
+          </div>
+
+          <div class="">
+            <!-- MESSINGVERF -->
+            <input
+              class=""
+              type="checkbox"
+              id="messingverf"
+              name="messingverf"
+              value="messingverf"
+            />
+            <label class="" for="messingverf"> Messingverf </label>
+          </div>
+
+          <div class="">
+            <!-- PRIMER -->
+            <input
+              class=""
+              type="checkbox"
+              id="primer"
+              name="primer"
+              value="primer"
+            />
+            <label class="" for="primer"> Primer </label>
+          </div>
+          <div class="">
+            <!-- AVTIVATOR -->
+            <input
+              class=""
+              type="checkbox"
+              id="activator"
+              name="activator"
+              value="activator"
+            />
+            <label class="" for="activator"> Activator </label>
+          </div>
+          <div class="">
+            <!-- SEALER -->
+            <input
+              class=""
+              type="checkbox"
+              id="sealer"
+              name="sealer"
+              value="sealer"
+            />
+            <label class="" for="sealer"> Sealer </label>
+          </div>
+          <div class="">
+            <!-- SPANEN -->
+            <input
+              class=""
+              type="checkbox"
+              id="spanen"
+              name="spanen"
+              value="spanen"
+            />
+            <label class="" for="spanen"> Spanen </label>
+          </div>
+          <div class="">
+            <!-- ROLLERS -->
+            <input
+              class=""
+              type="checkbox"
+              id="rollers"
+              name="rollers"
+              value="rollers"
+            />
+            <label class="" for="rollers"> Rollers </label>
+          </div>
+        </fieldset>
+      </div>
+    </section>
+
+
+    <!-- ------------------------------PRODUCTEN---------------------------- -->
+
+    <div class="bg-light  h-fit">
+        <div class="px-4 pb-4 pt-8">
+          <img
+            class="w-full h-[280px] object-cover"
+            src="assets/assets/Ijzerverf.png"
+          />
+
+          <div class="pt-4">
+            <p class="">FLEXIBELE RUBBEREN TROFFEL</p>
+            <p class="text-dark text-dark">€24,20</p>
+          </div>
+        </div>
+
+        <hr class="border-[1px] border-solid border-white" />
+
+        <div class="flex justify-center items-center p-4">
+          <button class="bg-dark h-[34px] w-[258px] rounded-full text-light">
+            In winkelwagentje
+          </button>
+        </div>
+
+    <section class="">
+  </body>
+</html>
