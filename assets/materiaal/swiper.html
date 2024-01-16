@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roestverfshop.nl</title>
+    <link rel="STYLESHEET" href="style.css" type="text/css" />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#804224",
+              secondary: "#2E2E2D",
+              light: "#EEEEEE",
+              dark: "#739321",
+            },
+            fontFamily: {
+              helvetica: ["Helvetica Neue"],
+              ubuntu: ["ubuntu"],
+            },
+            width: {},
+
+            spacing: {},
+          },
+        },
+      };
+    </script>
+  </head>
+</html>
+
+<body>
+  <div
+    style="--swiper-navigation-color: #17141400"
+    class="swiper mySwiper2 w-[1533px]"
+  >
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img
+          class="rounded-[30px] h-[329px] w-[630px]"
+          src="/assets/materiaal/01_8be759594ecb3117982471a3901ac098.jpg"
+        />
+      </div>
+      <div class="swiper-slide">
+        <img
+          class="rounded-[30px] h-[329px] w-[630px]"
+          src="/assets/materiaal/02_IJzer-fijn.jpg"
+        />
+      </div>
+      <div class="swiper-slide">
+        <img
+          class="rounded-[30px] h-[329px] w-[630px]"
+          src="/assets/materiaal/03_koperverf-oxidatie-presealer.jpg"
+        />
+      </div>
+
+      <div class="swiper-slide">
+        <img
+          class="rounded-[30px] h-[329px] w-[630px]"
+          src="/assets/materiaal/04_IJzer-grof.jpg"
+        />
+      </div>
+
+      <div class="swiper-slide">
+        <img
+          class="rounded-[30px] h-[329px] w-[630px]"
+          src="/assets/materiaal/05_c0d263d429211ab6401ff56a3b91c1bd.jpg"
+        />
+      </div>
+
+      <div class="swiper-slide">
+        <img
+          class="rounded-[30px] h-[329px] w-[630px]"
+          src="/assets/materiaal/06_9308fd2df1578414ed28581ce41d02f7.jpg"
+        />
+      </div>
+
+      <div class="swiper-slide">
+        <img
+          class="rounded-[30px] h-[329px] w-[630px]"
+          src="/assets/materiaal/07_ca28b12140d15c751b81c1b2981fd327.jpg"
+        />
+      </div>
+
+      <div class="swiper-slide">
+        <img
+          class="rounded-[30px] h-[329px] w-[630px]"
+          src="/assets/materiaal/08_Brons.jpg"
+        />
+      </div>
+
+      <div class="swiper-slide">
+        <img
+          class="rounded-[30px] h-[329px] w-[630px]"
+          src="/assets/materiaal/09_4c11a90a90273c1210ef25aa3fa14575.jpg"
+        />
+      </div>
+
+      <div class="swiper-slide">
+        <img
+          class="rounded-[30px] h-[329px] w-[630px]"
+          src="/assets/materiaal/10_Messing.jpg"
+        />
+      </div>
+    </div>
+  </div>
+  <!-- 
+  ----------------SLIDER------------------ -->
+  <div thumbsSlider="" class="swiper mySwiper">
+    <div class="swiper-wrapper flex justify-between w-[1141px]">
+      <div class="swiper-slide w-[70px]">
+        <img
+          class="w-[70px] h-[70px]"
+          src="/assets/Ijzer-natuurlijk-fijn.png"
+        />
+      </div>
+
+      <div class="swiper-slide">
+        <img class="w-[70px] h-[70px]" src="/assets/IJzer-grof@2x.png" />
+      </div>
+
+      <div class="swiper-slide">
+        <img
+          class="w-[94px] h-[94px]"
+          src="/assets/koperverf-oxidatie-presealer-2.png"
+        />
+      </div>
+
+      <div class="swiper-slide">
+        <img class="w-[70px] h-[70px]" src="/assets/IJzer-grof@2x.png" />
+      </div>
+
+      <div class="swiper-slide">
+        <img
+          class="w-[70px] h-[70px]"
+          src="/assets/c0d263d429211ab6401ff56a3b91c1bd@2x.png"
+        />
+      </div>
+
+      <div class="swiper-slide">
+        <img
+          class="w-[70px] h-[70px]"
+          src="/assets/9308fd2df1578414ed28581ce41d02f7@2x.png"
+        />
+      </div>
+
+      <div class="swiper-slide">
+        <img
+          class="w-[70px] h-[70px]"
+          src="/assets/ca28b12140d15c751b81c1b2981fd327@2x.png"
+        />
+      </div>
+
+      <div class="swiper-slide">
+        <img class="w-[70px] h-[70px]" src="/assets/Brons@2x.png" />
+      </div>
+
+      <div class="swiper-slide">
+        <img
+          class="w-[70px] h-[70px]"
+          src="/assets/4c11a90a90273c1210ef25aa3fa14575@2x.png"
+        />
+      </div>
+
+      <div class="swiper-slide">
+        <img class="w-[70px] h-[70px]" src="/assets/Messing@2x.png" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 0,
+      slidesPerView: 10,
+      freeMode: true,
+      watchSlidesProgress: true,
+      width: 700,
+    });
+    var swiper2 = new Swiper(".mySwiper2", {
+      spaceBetween: 0,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      thumbs: {
+        swiper: swiper,
+      },
+    });
+  </script>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>

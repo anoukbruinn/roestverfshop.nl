@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roestverfshop.nl</title>
+    <link rel="STYLESHEET" href="style.css" type="text/css" />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#804224",
+              secondary: "#2E2E2D",
+              light: "#EEEEEE",
+              dark: "#739321",
+            },
+            fontFamily: {
+              helvetica: ["Helvetica Neue"],
+              ubuntu: ["ubuntu"],
+            },
+            width: {},
+
+            spacing: {},
+          },
+        },
+      };
+    </script>
+
+    <body>
+      <header>
+        <div class="flex justify-between bg-white-500">
+          <img
+            class="pl-193 ml-48 mt-[2.125rem] mb-[2.125rem] h-[24px]"
+            src="assets/Group 30.svg"
+          />
+          <nav class="mt-8 h-[24px] mt-[2.125rem] mb-[2.125rem]">
+            <a class="text-ubuntu font-bold" href="/"> Home</a>
+            <a class="text-ubuntu font-bold ml-7" href="/"> Shop</a>
+            <a class="font-bold text-ubuntu ml-7" href="/"> Over ons</a>
+            <a class="font-bold text-ubuntu ml-7" href="/"> Hoe werkt het?</a>
+            <a class="font-bold text-ubuntu ml-7" href="/"> Contact</a>
+          </nav>
+          <!-- ------------search-input--------------- -->
+
+          <div
+            class="flex justify between bg-light my-[22px] w-29.813 rounded-[50px] overflow-hidden h-[50px] w-[29.813rem]"
+          >
+            <input
+              class="bg-light h-[50px] ml-[26px]"
+              type="text"
+              placeholder="Zoek producten"
+            />
+
+            <img
+              class="w-[21px] h-[21px] mt-[15px] ml-[230px]"
+              src="assets/Group 43.svg"
+            />
+          </div>
+
+          <div
+            class="w-[50px] h-[50px] rounded rounded-full bg-primary m-49 mt-8 mb-8 mr-48"
+          >
+            <p
+              class="bg-dark font-bold text-light text-ubuntu rounded-full w-[16px] h-[16px] border-white"
+            >
+              3
+            </p>
+            <img
+              class="flex justify-center items-center my-[2px] mx-[10px]"
+              src="assets/Path 31.svg"
+            />
+          </div>
+        </div>
+      </header>
+
+      <!-- swiper oefenen  -->
+
+      <section class="ml-48 mr-48 my-6 bg-[url('assets/kiesjevariant-bg.png')]">
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide flex justify-center">
+              <img src="assets/koperverf-oxidatie-presealer.png" />
+            </div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            ...
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <!-- <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div> -->
+
+          <!-- If we need scrollbar -->
+          <div
+            class="swiper-scrollbar space-between flex space-x-1 justify-end"
+          >
+            <img
+              class="h-[70px] w-[70px ]"
+              src="assets/Ijzer-natuurlijk-fijn.png"
+            />
+            <img
+              class="h-[70px] w-[70px ]"
+              src="assets/IJzer-oxidatie-fijn@2x.png"
+            />
+            <img
+              class="h-[70px] w-[70px ]"
+              src="assets/koperverf-oxidatie-presealer-2.png"
+            />
+            <img class="h-[70px] w-[70px ]" src="assets/IJzer-grof@2x.png" />
+            <img
+              class="h-[70px] w-[70px ]"
+              src="assets/c0d263d429211ab6401ff56a3b91c1bd@2x.png"
+            />
+            <img
+              class="h-[70px] w-[70px ]"
+              src="assets/9308fd2df1578414ed28581ce41d02f7@2x.png"
+            />
+            <img
+              class="h-[70px] w-[70px ]"
+              src="assets/ca28b12140d15c751b81c1b2981fd327@2x.png"
+            />
+            <img class="h-[70px] w-[70px ]" src="assets/Brons@2x.png" />
+            <img
+              class="h-[70px] w-[70px ]"
+              src="assets/4c11a90a90273c1210ef25aa3fa14575@2x.png"
+            />
+            <img class="h-[70px] w-[70px ]" src="assets/Messing@2x.png" />
+          </div>
+        </div>
+      </section>
+
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    </body>
+  </head>
+</html>
