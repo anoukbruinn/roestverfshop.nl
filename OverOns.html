@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roestverfshop.nl</title>
+    <link rel="STYLESHEET" href="style.css" type="text/css" />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#804224",
+              secondary: "#2E2E2D",
+              light: "#EEEEEE",
+              dark: "#739321",
+            },
+            fontFamily: {
+              helvetica: ["Helvetica Neue"],
+              ubuntu: ["ubuntu"],
+            },
+            width: {},
+
+            spacing: {},
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <div class="flex justify-between bg-white-500">
+        <img
+          class="pl-193 ml-48 mt-[2.125rem] mb-[2.125rem] h-[24px]"
+          src="assets/Group 30.svg"
+        />
+        <nav class="mt-8 h-[24px] mt-[2.125rem] mb-[2.125rem]">
+          <a class="text-ubuntu font-bold" href="/index.html"> Home</a>
+          <a class="text-ubuntu font-bold ml-7" href="/shop.html"> Shop</a>
+          <a class="font-bold text-ubuntu ml-7" href="/OverOns.html">
+            Over ons</a
+          >
+          <a class="font-bold text-ubuntu ml-7" href="/"> Hoe werkt het?</a>
+          <a class="font-bold text-ubuntu ml-7" href="/"> Contact</a>
+        </nav>
+        <!-- ------------search-input--------------- -->
+
+        <div
+          class="flex justify between bg-light my-[22px] w-29.813 rounded-[50px] overflow-hidden h-[50px] w-[29.813rem]"
+        >
+          <input
+            class="bg-light h-[50px] ml-[26px]"
+            type="text"
+            placeholder="Zoek producten"
+          />
+
+          <img
+            class="w-[21px] h-[21px] mt-[15px] ml-[230px]"
+            src="assets/Group 43.svg"
+          />
+        </div>
+
+        <div
+          class="w-[50px] h-[50px] rounded rounded-full bg-primary m-49 mt-8 mb-8 mr-48"
+        >
+          <p
+            class="bg-dark font-bold text-light text-ubuntu rounded-full w-[16px] h-[16px] border-white"
+          >
+            3
+          </p>
+          <img
+            class="flex justify-center items-center my-[2px] mx-[10px]"
+            src="assets/Path 31.svg"
+          />
+        </div>
+      </div>
+    </header>
+
+    <section
+      class="bg-[url('assets/background-shop.png')] bg-no-repeat padding h-[265px]"
+    >
+      <div class="ml-[193px]">
+        <h1 class="text-helvetica text-light text-5xl pt-[69px]">Over ons</h1>
+        <p class="text-light text-ubuntu w-[1017px] top-[21px] pt-[21px]">
+          In de webshop van Roestverf vind je de beste verf voor het creëren van
+          een stoere, unieke en industriële look in je interieur. Onze
+          metaalverf is van het merk Acrocem Metal, heeft een hoogwaardige
+          kwaliteit en geeft een natuurlijk, roestachtig effect aan muren en
+          wanden.
+        </p>
+      </div>
+    </section>
+
+    <!-- -----------WAT WE DOEN--------------- -->
+
+    <section class="">
+      <h1 class="font-bold text-ubuntu text-[27px] text-center py-8">
+        Wat we doen
+      </h1>
+
+      <div class="flex justify-between px-[350px]">
+        <div class="">
+          <div
+            class="w-[114px] bg-dark rounded-full h-[114px] flex justify-center items-center my-[8px] ml-[55px] mr-[11px]"
+          >
+            <img class="h-[52.6px] w-[52.9px]" src="assets/paint-brush.png " />
+          </div>
+          <p class="w-[230px] text-center">
+            Roestverfshop is de enige leverancier van deze metaalverf in
+            Nederland
+          </p>
+        </div>
+        <div>
+          <div
+            class="w-[114px] bg-dark rounded-full h-[114px] flex justify-center items-center my-[8px] ml-[55px] mr-[11px]"
+          >
+            <img class="h-[52.6px] w-[52.9px]" src="assets/paint-brush.png " />
+          </div>
+          <p class="w-[230px] text-center">
+            Geeft een natuurlijk roest effect aan muren en wanden
+          </p>
+        </div>
+        <div class="">
+          <div
+            class="w-[114px] bg-dark rounded-full h-[114px] flex justify-center items-center my-[8px] ml-[55px] mr-[11px]"
+          >
+            <img class="h-[52.6px] w-[52.9px]" src="assets/paint-brush.png " />
+          </div>
+          <p class="w-[230px] text-center">
+            Verkrijgbaar in de kleuren ijzer, koper, messing en brons
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ------------------VOORBEELDEN-------------------- -->
+
+    <section class="">
+      <h1 class="font-bold text-ubuntu text-[27px]">Voorbeelden</h1>
+    </section>
+  </body>
+</html>
