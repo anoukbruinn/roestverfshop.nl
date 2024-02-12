@@ -1,723 +1,666 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Roestverfshop.nl</title>
-    <link rel="STYLESHEET" href="style.css" type="text/css" />
-    <!-- Link Swiper's CSS -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              primary: "#804224",
-              secondary: "#2E2E2D",
-              light: "#EEEEEE",
-              dark: "#739321",
-            },
-            fontFamily: {
-              helvetica: ["Helvetica Neue"],
-              ubuntu: ["ubuntu"],
-            },
-            width: {
-              852: "53.25rem",
-              477: "29.813rem",
-              59: "3.688rem",
-              15: "0.938rem",
-              17: "1.063rem",
-              134: "8.375",
-              312: "19.5rem",
-              60: "3.75rem",
-              243: "15.188rem",
-              189: "11.813rem",
-              287: "17.938rem",
-              362: "22.625rem",
-              1141: "71.313rem",
-              435: "27.188rem",
-              30: "1.875rem",
-              34: "2.125rem",
-              501: "31.313rem",
-              445: "27.813rem",
-            },
 
-            spacing: {
-              "90px": "90px",
-              "38px": "38px",
-            },
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roestverfshop.nl</title>
+  <link rel="STYLESHEET" href="style.css" type="text/css" />
+  <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#804224",
+            secondary: "#2E2E2D",
+            light: "#EEEEEE",
+            dark: "#739321",
+          },
+          fontFamily: {
+            helvetica: ["Helvetica Neue"],
+            ubuntu: ["ubuntu"],
+          },
+          width: {
+            852: "53.25rem",
+            477: "29.813rem",
+            59: "3.688rem",
+            15: "0.938rem",
+            17: "1.063rem",
+            134: "8.375",
+            312: "19.5rem",
+            60: "3.75rem",
+            243: "15.188rem",
+            189: "11.813rem",
+            287: "17.938rem",
+            362: "22.625rem",
+            1141: "71.313rem",
+            435: "27.188rem",
+            30: "1.875rem",
+            34: "2.125rem",
+            501: "31.313rem",
+            445: "27.813rem",
+          },
+
+          spacing: {
+            "90px": "90px",
+            "38px": "38px",
           },
         },
-      };
-    </script>
-  </head>
-  <body>
-    <header>
-      <div class="flex justify-between bg-white-500">
-        <img
-          class="pl-193 ml-48 mt-[2.125rem] mb-[2.125rem] h-[24px]"
-          src="assets/Group 30.svg"
-        />
-        <nav class="mt-8 h-[24px] mt-[2.125rem] mb-[2.125rem]">
-          <a class="text-ubuntu font-bold" href="/"> Home</a>
-          <a class="text-ubuntu font-bold ml-7" href="shop.html"> Shop</a>
-          <a class="font-bold text-ubuntu ml-7" href="over.html"> Over ons</a>
-          <a class="font-bold text-ubuntu ml-7" href="/"> Hoe werkt het?</a>
-          <a class="font-bold text-ubuntu ml-7" href="contact.html"> Contact</a>
-        </nav>
-        <!-- ------------search-input--------------- -->
+      },
+    };
+  </script>
+</head>
 
-        <div
-          class="flex justify between bg-light my-[22px] w-29.813 rounded-[50px] overflow-hidden h-[50px] w-[29.813rem]"
-        >
-          <input
-            class="bg-light h-[50px] ml-[26px]"
-            type="text"
-            placeholder="Zoek producten"
-          />
+<body>
+  <header>
+    <div class="flex justify-between items-center bg-white-500 p-2">
+      <img class="h-[24px]" src="assets/Group 30.svg" />
+      <nav class="hidden md:block mt-8 h-[24px] mt-[2.125rem] mb-[2.125rem] ">
+        <a class="text-ubuntu font-bold" href="/"> Home</a>
+        <a class="text-ubuntu font-bold ml-7" href="shop.html"> Shop</a>
+        <a class="font-bold text-ubuntu ml-7" href="over.html"> Over ons</a>
+        <a class="font-bold text-ubuntu ml-7" href="/"> Hoe werkt het?</a>
+        <a class="font-bold text-ubuntu ml-7" href="contact.html"> Contact</a>
+      </nav>
+      <!-- ------------search-input--------------- -->
 
-          <img
+      <div
+        class="hidden md:flex justify-between bg-light my-[22px] w-29.813 rounded-[50px] overflow-hidden h-[50px] w-[29.813rem]">
+        <input class="hidden md:block bg-light h-[50px] ml-[26px]" type="text" placeholder="Zoek producten" />
+
+        <!-- <img
             class="w-[21px] h-[21px] mt-[15px] ml-[230px]"
             src="assets/Group 43.svg"
-          />
-        </div>
-
-        <div
-          class="w-[50px] h-[50px] rounded rounded-full bg-primary m-49 mt-8 mb-8 mr-48"
-        >
-          <p
-            class="bg-dark font-bold text-light text-ubuntu rounded-full w-[16px] h-[16px] border-white"
-          >
-            3
-          </p>
-          <img
-            class="flex justify-center items-center my-[2px] mx-[10px]"
-            src="assets/Path 31.svg"
-          />
-        </div>
-      </div>
-    </header>
-
-    <!-- --------------START MAIN------------ -->
-
-    <main>
-      <section
-        class="bg-[url('assets/roest-header-image.jpg')] bg-no-repeat padding"
-      >
-        <div>
-          <h1
-            class="text-5xl text-light text-helvetica ml-48 pt-20 font-normal"
-          >
-            Roestverf in verschillende kleuren
-          </h1>
-          <p
-            class="text-light font-light my-6 pb-31 ml-48 w-[53.25rem] text-sm"
-          >
-            Ben je op zoek naar een originele afwerking voor wanden en muren? De
-            hoogwaardige metaalverven van Roestverfshop geven een natuurlijk,
-            industrieel en roestachtig effect aan je ruimte. De verf bevat fijne
-            metaaldeeltjes en is verkrijgbaar in verschillende uitvoeringen.
-            Laat je verrassen!
-          </p>
-
-          <button 
-            class="text-light rounded-full border-solid border-white mb-[8.375rem] ml-48 border-2 w-[274px] h-[50px]"
-          >
-           <a href="/shop.html">Bekijk ons assortiment</a>      
-          </button>
-        </div>
-        <div class="flex justify-normal bg-secondary h-[3.688rem] mt-[3rem]">
-          <div class="flex ml-[27.188rem]">
-            <img
-              class="w-[0.938rem] h-[0.938rem] mt-[22px] mb-[22px]"
-              src="assets/check (1).svg"
-            />
-            <p class="text-ubuntu text-light mt-[17px] mb-[21px] ml-[8px]">
-              Veilig betalen via iDeal
-            </p>
-          </div>
-          <div class="flex ml-[100px]">
-            <img
-              class="w-[0.938rem] h-[0.938rem] mt-[22px] mb-[22px]"
-              src="assets/check (1).svg"
-            />
-            <p
-              class="text-ubuntu text-light text-[1.063rem] mt-[17px] mb-[21px] ml-[8px]"
-            >
-              Exclusieve shop voor bijzondere verftinten & roestverf
-            </p>
-          </div>
-          <div class="flex ml-[100px]">
-            <img
-              class="w-[0.938rem] h-[0.938rem] mt-[22px] mb-[22px]"
-              src="assets/check (1).svg"
-            />
-            <p class="text-ubuntu text-light mt-[17px] mb-[21px] ml-[8px]">
-              Gratis verzending v.a. €50,-
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <div class="my-4 flex justify-center">
-        <h1
-          class="text-5xl justify-center text-helvetica mt-[3.75rem] text-primary"
-        >
-          Onze
-        </h1>
-        <h1 class="text-5xl justify-center text-helvetica mt-[3.75rem] ml-3">
-          basiskleuren
-        </h1>
+          /> -->
       </div>
 
-      <!-- ---------------BASISKLEUREN---------------- -->
-
-      <section class="flex justify-between p-3.5 ml-48 mr-48 space-x-3.5">
-        <div class="bg-primary w-[31.313rem] p-3">
-          <h2
-            class="text-2xl text-light italic normal font-bold text-center normal mt-[60px]"
-          >
-            Een natuurlijk roest effect op muren en meubels
-          </h2>
-          <p class="text-center text-light p-[38px]">
-            Onze verf is gemaakt op waterbasis en bevat fijne metaaldeeltjes.
-          </p>
-          <p class="text-center text-light">
-            Verkrijgbaar in de kleuren brons, ijzer, koper en messing, met een
-            natuurlijk effect of een oxidatie effect.
-          </p>
+      <div class="flex gap-4">
+        <div class="relative flex justify-center items-center w-[50px] h-[50px] rounded rounded-full bg-primary">
+          <div class="absolute top-0 left-0 block bg-dark font-bold text-light text-ubuntu p-1 rounded-[50%] aspect-square border-white w-fit h-fit">
+            <span>3</span>
+          </div>
+          <img class="flex justify-center items-center my-[2px] mx-[10px]" src="assets/Path 31.svg" />
         </div>
 
-        <!-- -----------------------------------verf------------------------------------ -->
-
-        <!-- IJZERVERF -->
-
-        <div class="bg-light w-[15.188rem] h-97">
-          <img
-            class="mx-[27px] mt-[20px] mb-[13px]"
-            src="assets/Ijzerverf.png"
-          />
-          <p class="ml-[15px]">IJZERVERF (FIJN/GROF)</p>
-          <div class="flex justify-normal ml-[15px] mt-[5px]">
-            <p class="text-ubuntu font-bold">Vanaf</p>
-            <p class="text-ubuntu font-bold text-dark">€79,95</p>
-          </div>
-          <div class="flex justify-normal border-t-2 border-white mt-[5px]">
-            <div
-              class="w-8 bg-dark rounded-full h-8 flex justify-center items-center my-[8px] ml-[15px] mr-[11px]"
-            >
-              <img class="" src="assets/paint-brush.png " />
-            </div>
-            <p
-              class="text-ubuntu font-light text-sm flex justify-end underline underline-offset-1 mt-[15px]"
-            >
-              Bekijk kleurmogelijkheden
-            </p>
-          </div>
-        </div>
-
-        <!-- KOPERVERF -->
-        <div class="bg-light w-[15.188rem] h-97 place-content-center">
-          <img
-            class="mx-[41px] mt-[22px] mb-[13px]"
-            src="assets/koperverf.png"
-          />
-          <p class="ml-[15px]">KOPERVERF (FIJN/GROF)</p>
-          <div class="flex justify-normal ml-[15px] mt-[5px]">
-            <p class="text-ubuntu font-bold">Vanaf</p>
-            <p class="text-ubuntu font-bold text-dark">€79,95</p>
-          </div>
-          <div class="flex justify-normal border-t-2 border-white mt-[5px]">
-            <div
-              class="w-8 bg-dark rounded-full h-8 flex justify-center items-center my-[8px] ml-[15px] mr-[11px]"
-            >
-              <img class="" src="assets/paint-brush.png " />
-            </div>
-            <p
-              class="text-ubuntu font-light text-sm flex justify-end underline underline-offset-1 mt-[15px]"
-            >
-              Bekijk kleurmogelijkheden
-            </p>
-          </div>
-        </div>
-        <!-- MESSINGVERF -->
-        <div class="bg-light w-[15.188rem] h-97">
-          <img
-            class="mx-[44px] mt-[39px] mb-[30px]"
-            src="assets/messingverf.png"
-          />
-          <p class="ml-[15px]">MESSINGVERF (FIJN/GROF)</p>
-
-          <div class="flex justify-normal ml-[15px] mt-[5px]">
-            <p class="text-ubuntu font-bold">Vanaf</p>
-            <p class="text-ubuntu font-bold text-dark">€79,95</p>
-          </div>
-
-          <div class="flex justify-normal border-t-2 border-white mt-[5px]">
-            <div
-              class="w-8 bg-dark rounded-full h-8 flex justify-center items-center my-[8px] ml-[15px] mr-[11px]"
-            >
-              <img class="" src="assets/paint-brush.png " />
-            </div>
-            <p
-              class="text-ubuntu font-light text-sm flex justify-end underline underline-offset-1 mt-[15px]"
-            >
-              Bekijk kleurmogelijkheden
-            </p>
-          </div>
-        </div>
-
-        <!-- BRONSVERF -->
-        <div class="bg-light w-[15.188rem] h-97">
-          <img
-            class="mx-[44px] mt-[39px] mb-[27px]"
-            src="assets/bronsverf.png"
-          />
-          <p class="ml-[15px]">BRONSVERF (FIJN/GROF)</p>
-          <div class="flex justify-normal ml-[15px] mt-[5px]">
-            <p class="text-ubuntu font-bold">Vanaf</p>
-            <p class="text-ubuntu font-bold text-dark">€79,95</p>
-          </div>
-
-          <div class="flex justify-normal border-t-2 border-white mt-[5px]">
-            <div
-              class="w-8 bg-dark rounded-full h-8 flex justify-center items-center my-[8px] ml-[15px] mr-[11px]"
-            >
-              <img class="" src="assets/paint-brush.png " />
-            </div>
-            <p
-              class="text-ubuntu font-light text-sm flex justify-end underline underline-offset-1 mt-[15px]"
-            >
-              Bekijk kleurmogelijkheden
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- ---- button assortiment ---- -->
-
-      <div class="pt-[1.875rem] flex justify-end">
+        <!-- Mobile Menu - Button -->
         <button
-          class="bg-dark mr-48 rounded-full text-light text-dark h-[50px] w-[316px]"
-        >
-        <a href="/shop.html">Bekijk compleet assortiment</a>     
+          class="mobile-menu-btn flex md:hidden justify-center items-center space-y-1 group w-[50px] h-[50px] rounded-[50%] aspect-square p-2 bg-secondary">
+
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="15"
+            viewBox="0 0 17 15">
+            <defs>
+              <clipPath id="clip-path">
+                <rect id="Rectangle_105" data-name="Rectangle 105" width="17" height="15" transform="translate(0)"
+                  fill="#fff" />
+              </clipPath>
+            </defs>
+            <g id="Group_379" data-name="Group 379" transform="translate(-0.317)">
+              <g id="Group_378" data-name="Group 378" transform="translate(0.317)" clip-path="url(#clip-path)">
+                <path id="Path_437" data-name="Path 437"
+                  d="M1.3,0a1.3,1.3,0,1,0,0,2.593H15.988a1.3,1.3,0,0,0,0-2.593Zm0,6.265a1.3,1.3,0,0,0,0,2.593H15.988a1.3,1.3,0,0,0,0-2.593Zm0,6.265a1.3,1.3,0,0,0,0,2.593H15.988a1.3,1.3,0,0,0,0-2.593Z"
+                  transform="translate(-0.257)" fill="#fff" />
+              </g>
+            </g>
+          </svg>
         </button>
       </div>
+    </div>
 
-      <!---------------KIES JE VARIANT--------------  -->
+    <!-- menu -->
+    <ul class="mobile-menu hidden md:!hidden text-[20px] text-ubuntu font-bold text-white bg-primary w-screen pb-10  duration-150 flex flex-col space-y-3 justify-end right-0 -top-full p-3">
+      <li class=" flex w-full py-4  ">
+        <a href="index.html"> Home</a>
+      </li>
+      <li class="flex w-full py-4  ">
+        <a href="shop.html"> Shop</a>
+      </li>
+      <li class="flex w-full py-4 ">
+        <a href="over.html"> Over ons</a>
+      </li>
+      <li class="flex w-full py-4 ">
+        <a href="index.html"> Hoe werkt het?</a>
+      </li>
+      <li class="flex w-full py-4  " >
+        <a href="contact.html"> Contact</a>
+      </li>
 
-      <section class="ml-48 mr-48 my-6 bg-[url('assets/kiesjevariant-bg.png')] h-[600px]">
-        <div class="flex justify-between">
-          <div class="w-[19.5rem] pl-[3.75rem]">
-            <h1 class="text-3xl text-light text-helvetica mt-[3.75rem]">
-              Kies je variant
-            </h1>
-            <p class="text-light pt-[16px]">
-              Met onze basiskleuren brons, ijzer, koper en messing kan je in
-              combinatie met onze sealers en oxidatiemiddelen 10 verschillende
-              kleurvarianten maken.
-            </p>
-            <p class="text-light pt-[1rem]">
-              Hier zie je welke kleurvarianten er zijn en met welke producten je
-              die kan maken.
-            </p>
+      <li class=" flex justify-content"> 
+        <img src="assets/insta-logo.png" class="mr-[15px]" />
+        <img src="assets/facebook-logo.png" class="" /> 
+      </li>
+
+        <li class="font-light">Algemene voorwaarden</li>
+        <li class="font-light">Verzending</li>
+        <li class="font-light">Privacy statement</li>
+
+     
+        
+
+    </ul>
+
+    <script>
+      !$(document).ready(function () {
+        $(".mobile-menu-btn").click(function(){
+          $(".mobile-menu").toggleClass("hidden");
+        });
+      });
+    </script>
+  </header>
+
+  <!-- --------------START MAIN------------ -->
+
+  <main>
+    <section class="bg-[url('assets/mobile-background.jpg')] bg-no-repeat md:bg-[url('assets/roest-header-image.jpg')] bg-no-repeat padding">
+      <div class="p-3 md:pl-[250px]">
+        <h1 class=" text-[34px] text-light  text-helvetica md:text-5xl pt-20  ">
+          Roestverf in verschillende kleuren
+        </h1>
+        <p class="  text-light font-light my-6 pb-31 text-{24px} drop-shadow md:w-[53.25rem]   ">
+          Ben je op zoek naar een originele afwerking voor wanden en muren? De
+          hoogwaardige metaalverven van Roestverfshop geven een natuurlijk,
+          industrieel en roestachtig effect aan je ruimte. De verf bevat fijne
+          metaaldeeltjes en is verkrijgbaar in verschillende uitvoeringen.
+          Laat je verrassen!
+        </p>
+
+        <button
+          class="text-light rounded-full border-solid border-white   border-2 w-[274px] h-[50px]  md:mb-[60px]">
+          <a href="/shop.html">Bekijk ons assortiment</a>
+        </button>
+      </div>
+      <div class="flex justify-normal bg-secondary h-[3.688rem] mt-[3rem]">
+        <div class="flex ml-[27.188rem]">
+          <img class="w-[0.938rem] h-[0.938rem] mt-[22px] mb-[22px]" src="assets/check (1).svg" />
+          <p class="text-ubuntu text-light mt-[17px] mb-[21px] ml-[8px]">
+            Veilig betalen via iDeal
+          </p>
+        </div>
+        <div class="flex ml-[100px]">
+          <img class="w-[0.938rem] h-[0.938rem] mt-[22px] mb-[22px]" src="assets/check (1).svg" />
+          <p class="text-ubuntu text-light text-[1.063rem] mt-[17px] mb-[21px] ml-[8px]">
+            Exclusieve shop voor bijzondere verftinten & roestverf
+          </p>
+        </div>
+        <div class="flex ml-[100px]">
+          <img class="w-[0.938rem] h-[0.938rem] mt-[22px] mb-[22px]" src="assets/check (1).svg" />
+          <p class="text-ubuntu text-light mt-[17px] mb-[21px] ml-[8px]">
+            Gratis verzending v.a. €50,-
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="  flex justify-center">
+      <h1 class=" mt-[30px] text-[34px]  md:text-5xl justify-center text-helvetica mt-[3.75rem] text-primary">
+        Onze
+      </h1>
+      <h1 class="text-[34px] mt-[30px] md:text-5xl justify-center text-helvetica mt-[3.75rem] ml-3">
+        basiskleuren
+      </h1>
+    </div>
+
+    
+    <!-- ---------------BASISKLEUREN---------------- -->
+
+    <section class="flex justify-between p-3.5 ml-48 mr-48 space-x-3.5  ">
+      <div class="bg-primary w-[31.313rem] p-3">
+        <h2 class="text-2xl text-light italic normal font-bold text-center normal mt-[60px]">
+          Een natuurlijk roest effect op muren en meubels
+        </h2>
+        <p class="text-center text-light p-[38px]">
+          Onze verf is gemaakt op waterbasis en bevat fijne metaaldeeltjes.
+        </p>
+        <p class="text-center text-light">
+          Verkrijgbaar in de kleuren brons, ijzer, koper en messing, met een
+          natuurlijk effect of een oxidatie effect.
+        </p>
+      </div>
+
+      <!-- -----------------------------------verf------------------------------------ -->
+
+      <!-- IJZERVERF -->
+
+      <div class="bg-light w-[15.188rem] h-97">
+        <img class="mx-[27px] mt-[20px] mb-[13px]" src="assets/Ijzerverf.png" />
+        <p class="ml-[15px]">IJZERVERF (FIJN/GROF)</p>
+        <div class="flex justify-normal ml-[15px] mt-[5px]">
+          <p class="text-ubuntu font-bold">Vanaf</p>
+          <p class="text-ubuntu font-bold text-dark">€79,95</p>
+        </div>
+        <div class="flex justify-normal border-t-2 border-white mt-[5px]">
+          <div class="w-8 bg-dark rounded-full h-8 flex justify-center items-center my-[8px] ml-[15px] mr-[11px]">
+            <img class="" src="assets/paint-brush.png " />
           </div>
+          <p class="text-ubuntu font-light text-sm flex justify-end underline underline-offset-1 mt-[15px]">
+            Bekijk kleurmogelijkheden
+          </p>
+        </div>
+      </div>
+
+      <!-- KOPERVERF -->
+      <div class="bg-light w-[15.188rem] h-97 place-content-center">
+        <img class="mx-[41px] mt-[22px] mb-[13px]" src="assets/koperverf.png" />
+        <p class="ml-[15px]">KOPERVERF (FIJN/GROF)</p>
+        <div class="flex justify-normal ml-[15px] mt-[5px]">
+          <p class="text-ubuntu font-bold">Vanaf</p>
+          <p class="text-ubuntu font-bold text-dark">€79,95</p>
+        </div>
+        <div class="flex justify-normal border-t-2 border-white mt-[5px]">
+          <div class="w-8 bg-dark rounded-full h-8 flex justify-center items-center my-[8px] ml-[15px] mr-[11px]">
+            <img class="" src="assets/paint-brush.png " />
+          </div>
+          <p class="text-ubuntu font-light text-sm flex justify-end underline underline-offset-1 mt-[15px]">
+            Bekijk kleurmogelijkheden
+          </p>
+        </div>
+      </div>
+      <!-- MESSINGVERF -->
+      <div class="bg-light w-[15.188rem] h-97">
+        <img class="mx-[44px] mt-[39px] mb-[30px]" src="assets/messingverf.png" />
+        <p class="ml-[15px]">MESSINGVERF (FIJN/GROF)</p>
+
+        <div class="flex justify-normal ml-[15px] mt-[5px]">
+          <p class="text-ubuntu font-bold">Vanaf</p>
+          <p class="text-ubuntu font-bold text-dark">€79,95</p>
+        </div>
+
+        <div class="flex justify-normal border-t-2 border-white mt-[5px]">
+          <div class="w-8 bg-dark rounded-full h-8 flex justify-center items-center my-[8px] ml-[15px] mr-[11px]">
+            <img class="" src="assets/paint-brush.png " />
+          </div>
+          <p class="text-ubuntu font-light text-sm flex justify-end underline underline-offset-1 mt-[15px]">
+            Bekijk kleurmogelijkheden
+          </p>
+        </div>
+      </div>
+
+      <!-- BRONSVERF -->
+      <div class="bg-light w-[15.188rem] h-97">
+        <img class="mx-[44px] mt-[39px] mb-[27px]" src="assets/bronsverf.png" />
+        <p class="ml-[15px]">BRONSVERF (FIJN/GROF)</p>
+        <div class="flex justify-normal ml-[15px] mt-[5px]">
+          <p class="text-ubuntu font-bold">Vanaf</p>
+          <p class="text-ubuntu font-bold text-dark">€79,95</p>
+        </div>
+
+        <div class="flex justify-normal border-t-2 border-white mt-[5px]">
+          <div class="w-8 bg-dark rounded-full h-8 flex justify-center items-center my-[8px] ml-[15px] mr-[11px]">
+            <img class="" src="assets/paint-brush.png " />
+          </div>
+          <p class="text-ubuntu font-light text-sm flex justify-end underline underline-offset-1 mt-[15px]">
+            Bekijk kleurmogelijkheden
+          </p>
+        </div>
+      </div>
 
 
-          <!-- -------------------------------------------------SWIPER-GROOT----------------------------------------- -->
-          <div class="pt-10 pl-[70px] pb-9 w-[650px]">
-            <div
-            style="--swiper-navigation-color: #17141400"
-            class="swiper mySwiper2 w-[1533px]"
-          >
+    </section>
+
+    <!-- ---- button assortiment ---- -->
+
+    <div class="pt-[1.875rem] flex justify-end">
+      <button class="bg-dark mr-48 rounded-full text-light text-dark h-[50px] w-[316px]">
+        <a href="/shop.html">Bekijk compleet assortiment</a>
+      </button>
+    </div>
+
+    <!---------------KIES JE VARIANT--------------  -->
+
+    <section class="ml-48 mr-48 my-6 bg-[url('assets/kiesjevariant-bg.png')] h-[600px]">
+      <div class="flex justify-between">
+        <div class="w-[19.5rem] pl-[3.75rem]">
+          <h1 class="text-3xl text-light text-helvetica mt-[3.75rem]">
+            Kies je variant
+          </h1>
+          <p class="text-light pt-[16px]">
+            Met onze basiskleuren brons, ijzer, koper en messing kan je in
+            combinatie met onze sealers en oxidatiemiddelen 10 verschillende
+            kleurvarianten maken.
+          </p>
+          <p class="text-light pt-[1rem]">
+            Hier zie je welke kleurvarianten er zijn en met welke producten je
+            die kan maken.
+          </p>
+        </div>
+
+
+        <!-- -------------------------------------------------SWIPER-GROOT----------------------------------------- -->
+        <div class="pt-10 pl-[70px] pb-9 w-[650px]">
+          <div style="--swiper-navigation-color: #17141400" class="swiper mySwiper2 w-[1533px]">
             <div class="swiper-wrapper w-[650px]">
               <div class="swiper-slide">
-                <img
-                  class="rounded-[30px] h-[329px] w-[630px]"
-                  src="/assets/materiaal/01_8be759594ecb3117982471a3901ac098.jpg"
-                />
+                <img class="rounded-[30px] h-[329px] w-[630px]"
+                  src="/assets/materiaal/01_8be759594ecb3117982471a3901ac098.jpg" />
               </div>
               <div class="swiper-slide">
-                <img
-                  class="rounded-[30px] h-[329px] w-[630px]"
-                  src="/assets/materiaal/02_IJzer-fijn.jpg"
-                />
+                <img class="rounded-[30px] h-[329px] w-[630px]" src="/assets/materiaal/02_IJzer-fijn.jpg" />
               </div>
               <div class="swiper-slide">
-                <img
-                  class="rounded-[30px] h-[329px] w-[630px]"
-                  src="/assets/materiaal/03_koperverf-oxidatie-presealer.jpg"
-                />
+                <img class="rounded-[30px] h-[329px] w-[630px]"
+                  src="/assets/materiaal/03_koperverf-oxidatie-presealer.jpg" />
               </div>
-        
+
               <div class="swiper-slide">
-                <img
-                  class="rounded-[30px] h-[329px] w-[630px]"
-                  src="/assets/materiaal/04_IJzer-grof.jpg"
-                />
+                <img class="rounded-[30px] h-[329px] w-[630px]" src="/assets/materiaal/04_IJzer-grof.jpg" />
               </div>
-        
+
               <div class="swiper-slide">
-                <img
-                  class="rounded-[30px] h-[329px] w-[630px]"
-                  src="/assets/materiaal/05_c0d263d429211ab6401ff56a3b91c1bd.jpg"
-                />
+                <img class="rounded-[30px] h-[329px] w-[630px]"
+                  src="/assets/materiaal/05_c0d263d429211ab6401ff56a3b91c1bd.jpg" />
               </div>
-        
+
               <div class="swiper-slide">
-                <img
-                  class="rounded-[30px] h-[329px] w-[630px]"
-                  src="/assets/materiaal/06_9308fd2df1578414ed28581ce41d02f7.jpg"
-                />
+                <img class="rounded-[30px] h-[329px] w-[630px]"
+                  src="/assets/materiaal/06_9308fd2df1578414ed28581ce41d02f7.jpg" />
               </div>
-        
+
               <div class="swiper-slide">
-                <img
-                  class="rounded-[30px] h-[329px] w-[630px]"
-                  src="/assets/materiaal/07_ca28b12140d15c751b81c1b2981fd327.jpg"
-                />
+                <img class="rounded-[30px] h-[329px] w-[630px]"
+                  src="/assets/materiaal/07_ca28b12140d15c751b81c1b2981fd327.jpg" />
               </div>
-        
+
               <div class="swiper-slide">
-                <img
-                  class="rounded-[30px] h-[329px] w-[630px]"
-                  src="/assets/materiaal/08_Brons.jpg"
-                />
+                <img class="rounded-[30px] h-[329px] w-[630px]" src="/assets/materiaal/08_Brons.jpg" />
               </div>
-        
+
               <div class="swiper-slide">
-                <img
-                  class="rounded-[30px] h-[329px] w-[630px]"
-                  src="/assets/materiaal/09_4c11a90a90273c1210ef25aa3fa14575.jpg"
-                />
+                <img class="rounded-[30px] h-[329px] w-[630px]"
+                  src="/assets/materiaal/09_4c11a90a90273c1210ef25aa3fa14575.jpg" />
               </div>
-        
+
               <div class="swiper-slide">
-                <img
-                  class="rounded-[30px] h-[329px] w-[630px]"
-                  src="/assets/materiaal/10_Messing.jpg"
-                />
+                <img class="rounded-[30px] h-[329px] w-[630px]" src="/assets/materiaal/10_Messing.jpg" />
               </div>
             </div>
-          </div>
-          </div>
-
-          <div class="mt-[3.75rem] w-[267px] ml-[60px]">
-            <p class="text-white text-ubuntu">Product:</p>
-            <p class="text-white text-ubuntu font-bold w-[230px]">
-              Koperverf met oxidatie effect en presealer
-            </p>
-            <img class="w-[197px]" src="assets/Group 74.png" />
-
-            <button
-              class="rounded-full border-solid border-white border-2 text-light text-dark h-[50px] w-[200px]"
-            >
-              Meer over deze variant
-            </button>
           </div>
         </div>
 
-        <!---------------- swiper-kleur --------------->
+        <div class="mt-[3.75rem] w-[267px] ml-[60px]">
+          <p class="text-white text-ubuntu">Product:</p>
+          <p class="text-white text-ubuntu font-bold w-[230px]">
+            Koperverf met oxidatie effect en presealer
+          </p>
+          <img class="w-[197px]" src="assets/Group 74.png" />
 
-        <div thumbsSlider="" class="swiper mySwiper p-4">
-          <div class="swiper-wrapper flex justify-between w-[1000px] float-right overflow-hidden">
-            <div class="swiper-slide w-[70px]">
-              <img
-                class="w-[70px] h-[70px]"
-                src="/assets/Ijzer-natuurlijk-fijn.png"
-              />
-            </div>
-      
-            <div class="swiper-slide">
-              <img class="w-[70px] h-[70px]" src="/assets/IJzer-grof@2x.png" />
-            </div>
-      
-            <div class="swiper-slide">
-              <img
-                class="w-[70px] h-[70px]"
-                src="/assets/koperverf-oxidatie-presealer-2.png"
-              />
-            </div>
-      
-            <div class="swiper-slide">
-              <img class="w-[70px] h-[70px]" src="/assets/IJzer-grof@2x.png" />
-            </div>
-      
-            <div class="swiper-slide">
-              <img
-                class="w-[70px] h-[70px]"
-                src="/assets/c0d263d429211ab6401ff56a3b91c1bd@2x.png"
-              />
-            </div>
-      
-            <div class="swiper-slide">
-              <img
-                class="w-[70px] h-[70px]"
-                src="/assets/9308fd2df1578414ed28581ce41d02f7@2x.png"
-              />
-            </div>
-      
-            <div class="swiper-slide">
-              <img
-                class="w-[70px] h-[70px]"
-                src="/assets/ca28b12140d15c751b81c1b2981fd327@2x.png"
-              />
-            </div>
-      
-            <div class="swiper-slide">
-              <img class="w-[70px] h-[70px]" src="/assets/Brons@2x.png" />
-            </div>
-      
-            <div class="swiper-slide">
-              <img
-                class="w-[70px] h-[70px]"
-                src="/assets/4c11a90a90273c1210ef25aa3fa14575@2x.png"
-              />
-            </div>
-      
-            <div class="swiper-slide">
-              <img class="w-[70px] h-[70px]" src="/assets/Messing@2x.png" />
-            </div>
-          </div>
+          <button class="rounded-full border-solid border-white border-2 text-light text-dark h-[50px] w-[200px]">
+            Meer over deze variant
+          </button>
         </div>
-      </section>
-
-      <!-- ------------SPANEN EN ROLLERS---------------- -->
-
-      <div class="my-4 flex justify-center">
-        <h1 class="text-5xl text-primary justify-center mt-[3.75rem]">Onze</h1>
-        <h1 class="text-5xl justify-center text-helvetica mt-[3.75rem] ml-3">
-          spanen & rollers
-        </h1>
       </div>
 
-      <section class="flex space-between space-x-[16px] justify-center">
-        <div class="bg-light w-[501px] h-fit">
-          <div class="px-4 pb-4 pt-8">
-            <img
-              class="w-full h-[280px] object-cover"
-              src="assets/rollers.png"
-            />
+      <!---------------- swiper-kleur --------------->
 
-            <div class="pt-4">
-              <p class="">VERFROLLER</p>
-              <p class="text-dark text-dark">€6,35</p>
-            </div>
+      <div thumbsSlider="" class="swiper mySwiper p-4">
+        <div class="swiper-wrapper flex justify-between w-[1000px] float-right overflow-hidden">
+          <div class="swiper-slide w-[70px]">
+            <img class="w-[70px] h-[70px]" src="/assets/Ijzer-natuurlijk-fijn.png" />
           </div>
 
-          <hr class="border-[1px] border-solid border-white" />
-
-          <div class="flex justify-center items-center p-4">
-            <button class="bg-dark h-[34px] w-[258px] rounded-full text-light">
-              In winkelwagentje
-            </button>
+          <div class="swiper-slide">
+            <img class="w-[70px] h-[70px]" src="/assets/IJzer-grof@2x.png" />
           </div>
 
+          <div class="swiper-slide">
+            <img class="w-[70px] h-[70px]" src="/assets/koperverf-oxidatie-presealer-2.png" />
+          </div>
+
+          <div class="swiper-slide">
+            <img class="w-[70px] h-[70px]" src="/assets/IJzer-grof@2x.png" />
+          </div>
+
+          <div class="swiper-slide">
+            <img class="w-[70px] h-[70px]" src="/assets/c0d263d429211ab6401ff56a3b91c1bd@2x.png" />
+          </div>
+
+          <div class="swiper-slide">
+            <img class="w-[70px] h-[70px]" src="/assets/9308fd2df1578414ed28581ce41d02f7@2x.png" />
+          </div>
+
+          <div class="swiper-slide">
+            <img class="w-[70px] h-[70px]" src="/assets/ca28b12140d15c751b81c1b2981fd327@2x.png" />
+          </div>
+
+          <div class="swiper-slide">
+            <img class="w-[70px] h-[70px]" src="/assets/Brons@2x.png" />
+          </div>
+
+          <div class="swiper-slide">
+            <img class="w-[70px] h-[70px]" src="/assets/4c11a90a90273c1210ef25aa3fa14575@2x.png" />
+          </div>
+
+          <div class="swiper-slide">
+            <img class="w-[70px] h-[70px]" src="/assets/Messing@2x.png" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ------------SPANEN EN ROLLERS---------------- -->
+
+    <div class="my-4 flex justify-center">
+      <h1 class="text-5xl text-primary justify-center mt-[3.75rem]">Onze</h1>
+      <h1 class="text-5xl justify-center text-helvetica mt-[3.75rem] ml-3">
+        spanen & rollers
+      </h1>
+    </div>
+
+    <section class="flex space-between space-x-[16px] justify-center">
+      <div class="bg-light w-[501px] h-fit">
+        <div class="px-4 pb-4 pt-8">
+          <img class="w-full h-[280px] object-cover" src="assets/rollers.png" />
+
+          <div class="pt-4">
+            <p class="">VERFROLLER</p>
+            <p class="text-dark text-dark">€6,35</p>
+          </div>
+        </div>
+
+        <hr class="border-[1px] border-solid border-white" />
+
+        <div class="flex justify-center items-center p-4">
+          <button class="bg-dark h-[34px] w-[258px] rounded-full text-light">
+            In winkelwagentje
+          </button>
+        </div>
+
+
+      </div>
+
+      <div class="bg-light w-[501px] h-fit">
+        <div class="px-4 pb-4 pt-8">
+          <img class="w-full h-[280px] object-cover" src="assets/spatel.png" />
+
+          <div class="pt-4">
+            <p class="">BI-FLEX ROESTVRIJSTALEN TROFFEL</p>
+            <p class="text-dark text-dark">€33,70</p>
+          </div>
+        </div>
+
+        <hr class="border-[1px] border-solid border-white" />
+
+        <div class="flex justify-center items-center p-4">
+          <button class="bg-dark h-[34px] w-[258px] rounded-full text-light">
+            In winkelwagentje
+          </button>
+        </div>
+
+      </div>
+
+      <div class="bg-light w-[501px] h-fit">
+        <div class="px-4 pb-4 pt-8">
+          <img class="w-full h-[280px] object-cover" src="assets/rubberen-troffel.png" />
+
+          <div class="pt-4">
+            <p class="">FLEXIBELE RUBBEREN TROFFEL</p>
+            <p class="text-dark text-dark">€24,20</p>
+          </div>
+        </div>
+
+        <hr class="border-[1px] border-solid border-white" />
+
+        <div class="flex justify-center items-center p-4">
+          <button class="bg-dark h-[34px] w-[258px] rounded-full text-light">
+            In winkelwagentje
+          </button>
+        </div>
+    </section>
+
+    <!-- -----------HOE WERKT HET?------------- -->
+
+    <div class="my-4 flex justify-center">
+      <h1 class="text-5xl justify-center text-primary text-helvetica mt-[3.75rem]">
+        Hoe
+      </h1>
+      <h1 class="text-5xl justify-center text-helvetica ml-3 mt-[3.75rem]">
+        werkt het?
+      </h1>
+    </div>
+
+    <section class="flex justify-between p-3.5 ml-48 mr-48 space-x-3.5">
+      <div class="w-">
+        <img class="" src="assets/toepassing-bg (1).jpg" />
+      </div>
+
+      <div class="bg-primary w-[31.313rem] p-3">
+        <h2 class="text-2xl text-light italic normal font-bold text-center normal mt-[60px]">
+          Toepassing van onze verf
+        </h2>
+        <p class="text-center text-light p-[38px]">
+          Onze verf kun je op twee verschillende manieren toepassen: zonder
+          oxidatie of met oxidatie.
+        </p>
+        <p class="text-center text-light">
+          Het eindresultaat kan verschillen per ondergrond, probeer het
+          product daarom altijd uit op een klein stukje voordat je het op het
+          gehele oppervlakte aanbrengt.
+        </p>
+      </div>
+    </section>
+
+    <!-- ------------------------------------------------- FOOTER ------------------------------------------------------- -->
+
+    <!-- -------------1ste deel FOOTER---------------- -->
+    <footer>
+      <!-- ------------instagram----------- -->
+
+      <section class="bg-secondary h-[514px] mt-[60px]">
+        <div class="">
+          <h1 class="pt-[60px] text-5xl mt-[60px] flex justify-center text-helvetica text-light font-light">
+            Insta Inspiratie
+          </h1>
+          <p class="text-light text-ubuntu flex justify-center mt-[15px]">
+            Inspiratie nodig voor je volgende roestverfproject? Check dan ons
+            instagram account voor verschillende mooie projecten!
+          </p>
+        </div>
+
+        <!-- -----------pictures---------- -->
+
+        <div class=" md:flex justify-between mt-[30px]">
           
+        <div class="flex">
+          <img src="assets/insta1.png" class="" />
+          <img src="assets/instapost-2.jpg" class="mx-[15px]" />
         </div>
 
-        <div class="bg-light w-[501px] h-fit">
-          <div class="px-4 pb-4 pt-8">
-            <img
-              class="w-full h-[280px] object-cover"
-              src="assets/spatel.png"
-            />
-
-            <div class="pt-4">
-              <p class="">BI-FLEX ROESTVRIJSTALEN TROFFEL</p>
-              <p class="text-dark text-dark">€33,70</p>
-            </div>
-          </div>
-
-          <hr class="border-[1px] border-solid border-white" />
-
-          <div class="flex justify-center items-center p-4">
-            <button class="bg-dark h-[34px] w-[258px] rounded-full text-light">
-              In winkelwagentje
-            </button>
-          </div>
-
+        <div class="flex">
+          <img src="assets/insta3.jpg" class="" />
+          <img src="assets/insta4.jpg" class="mx-[15px]" />
+          <img src="assets/insta5.jpg" class=" sm:hidden" />
         </div>
-
-        <div class="bg-light w-[501px] h-fit">
-          <div class="px-4 pb-4 pt-8">
-            <img
-              class="w-full h-[280px] object-cover"
-              src="assets/rubberen-troffel.png"
-            />
-
-            <div class="pt-4">
-              <p class="">FLEXIBELE RUBBEREN TROFFEL</p>
-              <p class="text-dark text-dark">€24,20</p>
-            </div>
-          </div>
-
-          <hr class="border-[1px] border-solid border-white" />
-
-          <div class="flex justify-center items-center p-4">
-            <button class="bg-dark h-[34px] w-[258px] rounded-full text-light">
-              In winkelwagentje
-            </button>
-          </div>
-      </section>
-
-      <!-- -----------HOE WERKT HET?------------- -->
-
-      <div class="my-4 flex justify-center">
-        <h1
-          class="text-5xl justify-center text-primary text-helvetica mt-[3.75rem]"
-        >
-          Hoe
-        </h1>
-        <h1 class="text-5xl justify-center text-helvetica ml-3 mt-[3.75rem]">
-          werkt het?
-        </h1>
-      </div>
-
-      <section class="flex justify-between p-3.5 ml-48 mr-48 space-x-3.5">
-        <div class="w-">
-          <img class="" src="assets/toepassing-bg (1).jpg" />
-        </div>
-
-        <div class="bg-primary w-[31.313rem] p-3">
-          <h2
-            class="text-2xl text-light italic normal font-bold text-center normal mt-[60px]"
-          >
-            Toepassing van onze verf
-          </h2>
-          <p class="text-center text-light p-[38px]">
-            Onze verf kun je op twee verschillende manieren toepassen: zonder
-            oxidatie of met oxidatie.
-          </p>
-          <p class="text-center text-light">
-            Het eindresultaat kan verschillen per ondergrond, probeer het
-            product daarom altijd uit op een klein stukje voordat je het op het
-            gehele oppervlakte aanbrengt.
-          </p>
         </div>
       </section>
 
-      <!-- ------------------------------------------------- FOOTER ------------------------------------------------------- -->
+      <!-- -------------2e deel FOOTER---------------- -->
+      <section class="bg-primary flex ">
+        <div class="mt-[60px] ml-[20px] bg-primary md:flex md:ml-[193px]">
+          <div class="text-light pb-[15px] md:w-[243px]">
+            <ul class="text-ubuntu">
+              <li class="font-bold text-ubuntu"> Contactgegevens</li>
+              <li class="font-light text-ubuntu">Roestvershop.nl</li>
+              <li class="font-light text-ubuntu">Vliegwiel 4</li>
+              <li lass="font-light text-ubuntu">info@roestverfshop.nl</li>
+            </ul>
 
-      <!-- -------------1ste deel FOOTER---------------- -->
-      <footer>
-        <!-- ------------instagram----------- -->
-
-        <section class="bg-secondary h-[514px] mt-[60px]">
-          <div class="">
-            <h1
-              class="pt-[60px] text-5xl mt-[60px] flex justify-center text-helvetica text-light font-light"
-            >
-              Insta Inspiratie
-            </h1>
-            <p class="text-light text-ubuntu flex justify-center mt-[15px]">
-              Inspiratie nodig voor je volgende roestverfproject? Check dan ons
-              instagram account voor verschillende mooie projecten!
-            </p>
-          </div>
-
-          <!-- -----------pictures---------- -->
-
-          <div class="flex justify-center mt-[30px]">
-            <img src="assets/insta1.png" class="" />
-            <img src="assets/instapost-2.jpg" class="mx-[15px]" />
-            <img src="assets/insta3.jpg" class="" />
-            <img src="assets/insta4.jpg" class="mx-[15px]" />
-            <img src="assets/insta5.jpg" class="" />
-          </div>
-        </section>
-
-        <!-- -------------2e deel FOOTER---------------- -->
-        <section class="bg-primary flex h-[357px]">
-          <div class="mt-[60px] flex ml-[193px]">
-            <div class="text-light w-[243px]">
-              <ul class="text-ubuntu">
-                <li class="font-bold text-ubuntu"> Contactgegevens</li>
-                <li class="font-light text-ubuntu">Roestvershop.nl</li>
-                <li class="font-light text-ubuntu">Vliegwiel 4</li>
-                <li lass="font-light text-ubuntu">info@roestverfshop.nl</li>
-              </ul>
-
-              <div class="flex mt-[21px]">
-                <img src="assets/insta-logo.png" class="mr-[15px]" />
-                <img src="assets/facebook-logo.png" class="" />
-              </div>
-            </div>
-            <div class="text-light w-[243px]">
-              <ul class="text-ubuntu">
-                <li class="font-bold text-ubuntu">Onze voorwaarden</li>
-                <li class="font-light text-ubuntu">Algemene voorwaarden</li>
-                <li class="font-light text-ubuntu">Verzending</li>
-                <li class="font-light text-ubuntu"> <a class="font-light text-ubuntu" href="/statement.html">Privacy statement</a> </li>
-              </ul>
-            </div>
-            <div class="text-light w-[243px]">
-              <ul class="text-ubuntu">
-                <li class="font-bold text-ubuntu">Snelmenu</li>
-                <li class="font-light text-ubuntu">Home</li>
-                <li class="font-light text-ubuntu">Shop</li>
-                <li lass="font-light text-ubuntu">Over ons</li>
-                <li class="font-light text-ubuntu">Hoe werkt het?</li>
-                <li class="font-light text-ubuntu">Contact</li>
-              </ul>
-            </div>
-            <div class="text-light">
-              <ul>
-                <li class="font-bold text-ubuntu">Over deze site</li>
-                <li class="font-light text-ubuntu">
-                  Copyright © 2021, Roestverfshop.nl. Alle rechten voorbehouden.
-                </li>
-                <li class="font-light text-ubuntu">
-                  Ontwerp & techniek door 53 Graden Noord.
-                </li>
-              </ul>
+            <div class="flex mt-[21px]">
+              <img src="assets/insta-logo.png" class="mr-[15px]" />
+              <img src="assets/facebook-logo.png" class="" />
             </div>
           </div>
-        </section>
-      </footer>
+          <div class="text-light pb-[15px] md:w-[243px]">
+            <ul class="text-ubuntu">
+              <li class="font-bold text-ubuntu">Onze voorwaarden</li>
+              <li class="font-light text-ubuntu">Algemene voorwaarden</li>
+              <li class="font-light text-ubuntu">Verzending</li>
+              <li class="font-light text-ubuntu"> <a class="font-light text-ubuntu" href="/statement.html">Privacy
+                  statement</a> </li>
+            </ul>
+          </div>
+          <div class="text-light pb-[15px] md:w-[243px]">
+            <ul class="text-ubuntu">
+              <li class="font-bold text-ubuntu">Snelmenu</li>
+              <li class="font-light text-ubuntu">Home</li>
+              <li class="font-light text-ubuntu">Shop</li>
+              <li lass="font-light text-ubuntu">Over ons</li>
+              <li class="font-light text-ubuntu">Hoe werkt het?</li>
+              <li class="font-light text-ubuntu">Contact</li>
+            </ul>
+          </div>
+          <div class="text-light pb-[20px]">
+            <ul>
+              <li class="font-bold text-ubuntu">Over deze site</li>
+              <li class="font-light text-ubuntu">
+                Copyright © 2021, Roestverfshop.nl. Alle rechten voorbehouden.
+              </li>
+              <li class="font-light text-ubuntu">
+                Ontwerp & techniek door 53 Graden Noord.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </footer>
 
-      <!-- -------------SCRIPT SLIDER-------------------- -->
+    <!-- -------------SCRIPT SLIDER-------------------- -->
 
-      <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-  <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      spaceBetween: 0,
-      slidesPerView: 10,
-      freeMode: true,
-      watchSlidesProgress: true,
-      width: 700,
-      
-    });
-    var swiper2 = new Swiper(".mySwiper2", {
-      spaceBetween: 0,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      thumbs: {
-        swiper: swiper,
-      },
-      effect: 'fade',
-  fadeEffect: {
-    crossFade: true}
-    });
-  </script>
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 0,
+        slidesPerView: 10,
+        freeMode: true,
+        watchSlidesProgress: true,
+        width: 700,
+
+      });
+      var swiper2 = new Swiper(".mySwiper2", {
+        spaceBetween: 0,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+          swiper: swiper,
+        },
+        effect: 'fade',
+        fadeEffect: {
+          crossFade: true
+        }
+      });
+    </script>
 
 
 
-      
-    </main>
-  </body>
+
+  </main>
+</body>
+
 </html>
-
-
-
-
