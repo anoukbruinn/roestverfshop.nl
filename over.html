@@ -12,6 +12,11 @@
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+      integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+      crossorigin="anonymous"
+    ></script>
     <script>
       tailwind.config = {
         theme: {
@@ -37,13 +42,10 @@
 
   <body>
     <header>
-      <div class="flex justify-between bg-white-500">
-        <img
-          class="pl-193 ml-48 mt-[2.125rem] mb-[2.125rem] h-[24px]"
-          src="assets/Group 30.svg"
-        />
-        <nav class="mt-8 h-[24px] mt-[2.125rem] mb-[2.125rem]">
-          <a class="text-ubuntu font-bold" href="index.html"> Home</a>
+      <div class="flex justify-between items-center bg-white-500 p-2">
+        <img class="h-[24px]" src="assets/Group 30.svg" />
+        <nav class="hidden md:block mt-8 h-[24px] mt-[2.125rem] mb-[2.125rem]">
+          <a class="text-ubuntu font-bold" href="/"> Home</a>
           <a class="text-ubuntu font-bold ml-7" href="shop.html"> Shop</a>
           <a class="font-bold text-ubuntu ml-7" href="over.html"> Over ons</a>
           <a class="font-bold text-ubuntu ml-7" href="/"> Hoe werkt het?</a>
@@ -52,42 +54,129 @@
         <!-- ------------search-input--------------- -->
 
         <div
-          class="flex justify between bg-light my-[22px] w-29.813 rounded-[50px] overflow-hidden h-[50px] w-[29.813rem]"
+          class="hidden md:flex justify-between bg-light my-[22px] w-29.813 rounded-[50px] overflow-hidden h-[50px] w-[29.813rem]"
         >
           <input
-            class="bg-light h-[50px] ml-[26px]"
+            class="hidden md:block bg-light h-[50px] ml-[26px]"
             type="text"
             placeholder="Zoek producten"
           />
-
-          <img
-            class="w-[21px] h-[21px] mt-[15px] ml-[230px]"
-            src="assets/Group 43.svg"
-          />
         </div>
 
-        <div
-          class="w-[50px] h-[50px] rounded rounded-full bg-primary m-49 mt-8 mb-8 mr-48"
-        >
-          <p
-            class="bg-dark font-bold text-light text-ubuntu rounded-full w-[16px] h-[16px] border-white"
+        <div class="flex gap-4">
+          <div
+            class="relative flex justify-center items-center w-[50px] h-[50px] rounded rounded-full bg-primary"
           >
-            3
-          </p>
-          <img
-            class="flex justify-center items-center my-[2px] mx-[10px]"
-            src="assets/Path 31.svg"
-          />
+            <div
+              class="absolute top-0 left-0 block bg-dark font-bold text-light text-ubuntu p-1 rounded-[50%] aspect-square border-white w-fit h-fit"
+            >
+              <span>3</span>
+            </div>
+            <img
+              class="flex justify-center items-center my-[2px] mx-[10px]"
+              src="assets/Path 31.svg"
+            />
+          </div>
+
+          <!-- Mobile Menu - Button -->
+          <button
+            class="mobile-menu-btn flex md:hidden justify-center items-center space-y-1 group w-[50px] h-[50px] rounded-[50%] aspect-square p-2 bg-secondary"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              width="17"
+              height="15"
+              viewBox="0 0 17 15"
+            >
+              <defs>
+                <clipPath id="clip-path">
+                  <rect
+                    id="Rectangle_105"
+                    data-name="Rectangle 105"
+                    width="17"
+                    height="15"
+                    transform="translate(0)"
+                    fill="#fff"
+                  />
+                </clipPath>
+              </defs>
+              <g
+                id="Group_379"
+                data-name="Group 379"
+                transform="translate(-0.317)"
+              >
+                <g
+                  id="Group_378"
+                  data-name="Group 378"
+                  transform="translate(0.317)"
+                  clip-path="url(#clip-path)"
+                >
+                  <path
+                    id="Path_437"
+                    data-name="Path 437"
+                    d="M1.3,0a1.3,1.3,0,1,0,0,2.593H15.988a1.3,1.3,0,0,0,0-2.593Zm0,6.265a1.3,1.3,0,0,0,0,2.593H15.988a1.3,1.3,0,0,0,0-2.593Zm0,6.265a1.3,1.3,0,0,0,0,2.593H15.988a1.3,1.3,0,0,0,0-2.593Z"
+                    transform="translate(-0.257)"
+                    fill="#fff"
+                  />
+                </g>
+              </g>
+            </svg>
+          </button>
         </div>
       </div>
+
+      <!-- menu -->
+      <ul
+        class="mobile-menu hidden md:!hidden text-[20px] text-ubuntu font-bold text-white bg-primary w-screen pb-10 duration-150 flex flex-col space-y-3 justify-end right-0 -top-full p-3"
+      >
+        <li class="flex w-full py-4">
+          <a href="index.html"> Home</a>
+        </li>
+        <li class="flex w-full py-4">
+          <a href="shop.html"> Shop</a>
+        </li>
+        <li class="flex w-full py-4">
+          <a href="over.html"> Over ons</a>
+        </li>
+        <li class="flex w-full py-4">
+          <a href="index.html"> Hoe werkt het?</a>
+        </li>
+        <li class="flex w-full py-4">
+          <a href="contact.html"> Contact</a>
+        </li>
+
+        <li class="flex justify-content">
+          <img src="assets/insta-logo.png" class="mr-[15px]" />
+          <img src="assets/facebook-logo.png" class="" />
+        </li>
+
+        <li class="font-light">Algemene voorwaarden</li>
+        <li class="font-light">Verzending</li>
+        <li class="font-light">Privacy statement</li>
+      </ul>
+
+      <script>
+        !$(document).ready(function () {
+          $(".mobile-menu-btn").click(function () {
+            $(".mobile-menu").toggleClass("hidden");
+          });
+        });
+      </script>
     </header>
 
     <section
-      class="bg-[url('assets/background-shop.png')] bg-no-repeat padding h-[265px]"
+      class="bg-[url('assets/background-shop.png')] bg-no-repeat padding md:h-[265px]"
     >
-      <div class="ml-[193px]">
-        <h1 class="text-helvetica text-light text-5xl pt-[69px]">Over ons</h1>
-        <p class="text-light text-ubuntu w-[1017px] top-[21px] pt-[21px]">
+      <div class="md:ml-[193px] p-4">
+        <h1
+          class="text-helvetica text-light text-[32px] italic font-bold :text-5xl md:pt-[69px]"
+        >
+          Over ons
+        </h1>
+        <p
+          class="text-light text-ubuntu text-[16px] w-full md:w-[1017px] md:top-[21px] pt-[21px]"
+        >
           In de webshop van Roestverf vind je de beste verf voor het creëren van
           een stoere, unieke en industriële look in je interieur. Onze
           metaalverf is van het merk Acrocem Metal, heeft een hoogwaardige
@@ -99,7 +188,39 @@
 
     <!-- -----------WAT WE DOEN--------------- -->
 
-    <section class="">
+    <h1
+      class="block md:hidden font-bold text-center ubuntu italic p-4 text-[24px]"
+    >
+      Wat we doen
+    </h1>
+
+    <ul class="block md:hidden px-6 pb-6 text-[13px]">
+      <li class="flex">
+        <img
+          class="mr-2 bg-dark rounded-full w-8 h-8 p-2"
+          src="assets/paint-brush.png "
+        />
+        Roestverfshop is de enige leverancier van deze metaalverf in Nederland
+      </li>
+
+      <li class="flex py-3">
+        <img
+          class="mr-2 bg-dark rounded-full w-8 h-8 p-2"
+          src="assets/paint-brush.png "
+        />
+        Geeft een natuurlijk roest effect aan muren en wanden
+      </li>
+
+      <li class="flex">
+        <img
+          class="mr-2 bg-dark rounded-full w-8 h-8 p-2"
+          src="assets/paint-brush.png "
+        />
+        Verkrijgbaar in de kleuren ijzer, koper, messing en brons
+      </li>
+    </ul>
+
+    <section class="hidden md:block">
       <h1 class="font-bold text-ubuntu text-[27px] text-center py-8">
         Wat we doen
       </h1>
@@ -141,29 +262,62 @@
 
     <!-- ------------------VOORBEELDEN-------------------- -->
 
-    <section class="pt-[90px]">
+    <!-- -------------desktop---------- -->
+
+    <section class="md:pt-[90px]">
       <h1 class="font-bold text-ubuntu text-[27px] pb-[40px] text-center">
         Voorbeelden
       </h1>
 
-      <div class="flex justify-content pl-[193px]">
-        <div>
+      <div class="flex justify-content md:pl-[193px]">
+        <div class="hidden md:block">
           <img src="assets/Image-23.png" />
           <img class="pt-[15px]" src="assets/Mask-Group-12.png" />
         </div>
 
-        <img class="pl-[15px] pb-[15px]" src="assets/Image-27.png" />
+        <img
+          class="p-2 md:p-0 md:pl-[15px] pb-[15px]"
+          src="assets/Image-27.png"
+        />
       </div>
 
-      <div class="flex justify-content pl-[193px]">
-        <img src="assets/Image-24.png" />
-        <img class="pl-[15px]" src="assets/Mask-Group-13.png" />
+      <div class="flex p-2 justify-content md;pl-[193px] md:px-[189px]">
+        <img class="w-[50%]" src="assets/Image-24.png" />
+        <img class="pl-[15px] w-[50%]" src="assets/Mask-Group-13.png" />
       </div>
     </section>
 
+    <h1
+      class="block md:hidden font-bold italic text-ubuntu text-[27px] text-center p-3"
+    >
+      Meer content
+    </h1>
+    <section class="block md:hidden p-2">
+      <div class="bg-primary p-3">
+        <h2 class="text-light font-bold text-[17px] italic ubuntu text-center">
+          Een natuurlijk roesteffect op muren en meubels
+        </h2>
+
+        <p class="text-light text-[16px] py-4">
+          Onze verf is gemaakt op waterbasis en bevat fijne metaaldeeltjes.
+        </p>
+        <p class="text-light text-[16px]">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit
+          amet iaculis ligula, sit amet lacinia ex. Praesent vestibulum neque
+          non ex viverra, at posuere nunc pulvinar. Duis tempus magna at mauris
+          rhoncus sollicitudin.
+        </p>
+
+        <button
+          class="text-light ubuntu rounded-full text-light text-white font-bold py-4"
+        >
+          Meer content
+        </button>
+      </div>
+    </section>
     <!-- ----------------------Meer content-------------------- -->
 
-    <section class="w-[1017px] my-[60px] mx-[451px]">
+    <section class="hidden md:block w-[1017px] my-[60px] mx-[451px]">
       <h2 class="text-2xl font-bold text">Meer content</h2>
 
       <p class="text-base text-ubuntu">
@@ -234,14 +388,16 @@
     <footer>
       <!-- ------------instagram----------- -->
 
-      <section class="bg-secondary h-[514px] mt-[60px]">
+      <section class="bg-secondary md:h-[514px] mt-[60px]">
         <div class="">
           <h1
-            class="pt-[60px] text-5xl mt-[60px] flex justify-center text-helvetica text-light font-light"
+            class="pt-[60px] text-[34px] justify-start pl-6 font-bold mt-[60px] flex text-helvetica text-light italic md:justify-center md:pl-0 md:text-5xl"
           >
             Insta Inspiratie
           </h1>
-          <p class="text-light text-ubuntu flex justify-center mt-[15px]">
+          <p
+            class="text-light pl-6 w-[330px] text-ubuntu flex md:justify-center mt-[15px] md:w-full"
+          >
             Inspiratie nodig voor je volgende roestverfproject? Check dan ons
             instagram account voor verschillende mooie projecten!
           </p>
@@ -249,19 +405,24 @@
 
         <!-- -----------pictures---------- -->
 
-        <div class="flex justify-center mt-[30px]">
-          <img src="assets/insta1.png" class="" />
-          <img src="assets/instapost-2.jpg" class="mx-[15px]" />
-          <img src="assets/insta3.jpg" class="" />
-          <img src="assets/insta4.jpg" class="mx-[15px]" />
-          <img src="assets/insta5.jpg" class="" />
+        <div
+          class="grid grid-cols-2 p-4 md:grid-cols-3 xl:grid-cols-5 md:px-[322px] mt-[30px] gap-4"
+        >
+          <img src="assets/insta1.png" class="h-[166px] w-full md:h-[243px]" />
+          <img
+            src="assets/instapost-2.jpg"
+            class="h-[166px] w-full md:h-[243px]"
+          />
+          <img src="assets/insta3.jpg" class="h-[166px] w-full md:h-[243px]" />
+          <img src="assets/insta4.jpg" class="h-[166px] w-full md:h-[243px]" />
+          <img src="assets/insta5.jpg" class="hidden w-full md:block" />
         </div>
       </section>
 
       <!-- -------------2e deel FOOTER---------------- -->
-      <section class="bg-primary flex h-[357px]">
-        <div class="mt-[60px] flex ml-[193px]">
-          <div class="text-light w-[243px]">
+      <section class="bg-primary flex">
+        <div class="mt-[60px] ml-[20px] bg-primary md:flex md:ml-[193px]">
+          <div class="text-light pb-[15px] md:w-[243px]">
             <ul class="text-ubuntu">
               <li class="font-bold text-ubuntu">Contactgegevens</li>
               <li class="font-light text-ubuntu">Roestvershop.nl</li>
@@ -274,15 +435,19 @@
               <img src="assets/facebook-logo.png" class="" />
             </div>
           </div>
-          <div class="text-light w-[243px]">
+          <div class="text-light pb-[15px] md:w-[243px]">
             <ul class="text-ubuntu">
               <li class="font-bold text-ubuntu">Onze voorwaarden</li>
               <li class="font-light text-ubuntu">Algemene voorwaarden</li>
               <li class="font-light text-ubuntu">Verzending</li>
-              <li lass="font-light text-ubuntu">Privacy statement</li>
+              <li class="font-light text-ubuntu">
+                <a class="font-light text-ubuntu" href="/statement.html"
+                  >Privacy statement</a
+                >
+              </li>
             </ul>
           </div>
-          <div class="text-light w-[243px]">
+          <div class="text-light pb-[15px] md:w-[243px]">
             <ul class="text-ubuntu">
               <li class="font-bold text-ubuntu">Snelmenu</li>
               <li class="font-light text-ubuntu">Home</li>
@@ -292,7 +457,7 @@
               <li class="font-light text-ubuntu">Contact</li>
             </ul>
           </div>
-          <div class="text-light">
+          <div class="text-light pb-[20px]">
             <ul>
               <li class="font-bold text-ubuntu">Over deze site</li>
               <li class="font-light text-ubuntu">
@@ -307,4 +472,34 @@
       </section>
     </footer>
   </body>
+
+  <!-- -------------SCRIPT SLIDER-------------------- -->
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 0,
+      slidesPerView: 10,
+      freeMode: true,
+      watchSlidesProgress: true,
+      width: 700,
+    });
+    var swiper2 = new Swiper(".mySwiper2", {
+      spaceBetween: 0,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      thumbs: {
+        swiper: swiper,
+      },
+      effect: "fade",
+      fadeEffect: {
+        crossFade: true,
+      },
+    });
+  </script>
 </html>
